@@ -1,17 +1,28 @@
 import React, { useState }  from 'react'
 import './Rowpost.css';
 import axios from '../axios';
-import {API_KEY,imageUrl} from '../constents/Constant';
+import Youtube from 'react-youtube'
+import {imageUrl} from '../constents/Constant';
 import { useEffect } from 'react';
 function Rowpost(props) {
     const [movies, setMovies] = useState([])
     
     useEffect(() => {
-        axios.get(`discover/tv?api_key=${API_KEY}&with_networks=213`).then(response=>{
+        axios.get(props.url).then(response=>{
             console.log(response.data)
             setMovies(response.data.results)
         })
     }, [])
+
+    const opts = {
+        height: '390',
+        width: '100%',
+        playerVars: {
+          // https://developers.google.com/youtube/player_parameters
+          autoplay: 0,
+        },
+      };
+
     return (
         <div className="row">
             <h2>{props.title} </h2>
@@ -23,6 +34,8 @@ function Rowpost(props) {
 
             
             </div>
+            <Youtube opts={opts} videoId="2g811Eo7K8U"/>
+
         </div>
     )
 }
