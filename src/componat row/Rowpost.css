@@ -1,6 +1,7 @@
 .row{
     margin-left: 20px;
     color: white;
+    margin-top: 30px;
 }
 .posters{
     display: flex;
@@ -14,9 +15,21 @@
 .poster{
     max-height:  250px; 
     margin-right: 10px;
+    cursor: pointer;
+        padding-top: 15px;
 
+
+}
+.poster:hover{
+
+transform: scale(1.1);
 }
 .smallPoster{
     max-height: 150px;
     margin-right: 10px;
+    cursor: pointer;
+}
+.smallPoster:hover{
+
+    transform: scale(1.1);
 }

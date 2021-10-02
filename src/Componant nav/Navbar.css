@@ -11,8 +11,8 @@ justify-content: space-between;
 
 .logo{
     position: fixed;
-    left: 20px;
-    width: 80px;
+    left: 30px;
+    width: 135px;
 }
 
 .avatar{
@@ -22,3 +22,27 @@ justify-content: space-between;
     width: 30px;
 
 }
+.button5{
+    
+        
+        
+    position: fixed;
+    right: 90px;
+    color: white;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 5px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: red;
+    cursor: pointer;
+        
+}
+.button5:hover{
+    color: red;
+    background-color: white;
+}
+
